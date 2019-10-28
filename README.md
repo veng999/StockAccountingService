@@ -39,4 +39,16 @@
     </tr>
 </table>
 <h4><strong>Требования предъвляемые к созданию приложения:</strong></h4>
-<p>1. Приложение должно работать под управлением сервера приложений <strong><span style="text-decoration: underline;">Apache Tomcat</span></strong>. Данные необходимо хранить в базе данных под управленем СУБД <strong><span style="text-decoration: underline;">HSQLDB</span></strong>. Обращение к базе данных осуществлять посредством <strong><span style="text-decoration: underline;">spring-jdbc</span></strong>.<br />2. При обращении на первую страницу приложения должна отображаться страница со списком товаров, с возможностью создания, редактирования и удаления каждой позиции в списке. При создании и рекдактировании товара должна открываться форма товара с возможностью сохранения изменений и отмены сохранения.<br />3. Должен быть предусмотрен <strong><span style="text-decoration: underline;">AJAX</span></strong> подход: обновление списка, отрисовка формы товара должно происходить без полной перерисовки страницы.<br />4. Страница должна общаться к web-сервису, используя <strong><span style="text-decoration: underline;">REST</span></strong> протокол.</p>
+<p>1. Приложение должно работать под управлением сервера приложений <strong><span style="text-decoration: underline;">Apache Tomcat</span></strong>. Данные необходимо хранить в базе данных под управленем СУБД <strong><span style="text-decoration: underline;">HSQLDB</span></strong>. Обращение к базе данных осуществлять посредством <strong><span style="text-decoration: underline;">spring-jdbc</span></strong>.<br />2. При обращении на первую страницу приложения должна отображаться страница со списком товаров, с возможностью создания, редактирования и удаления каждой позиции в списке. При создании и рекдактировании товара должна открываться форма товара с возможностью сохранения изменений и отмены сохранения.<br />3. Должен быть предусмотрен <strong><span style="text-decoration: underline;">AJAX</span></strong> подход: обновление списка, отрисовка формы товара должно происходить без полной перерисовки страницы.<br />
+    4. Страница должна общаться к web-сервису, используя <strong><span style="text-decoration: underline;">REST</span></strong> протокол.</br></p>
+
+ Index.html доступен по url http://localhost:63342/StockAccountingService/StockAccountingService.main/static/index.html </br>
+ Для взаимодействия с сервером Tomcat клиент должен обращаться к нему с помощью следующих запросов. 
+http://localhost:8080/product/save – GET </br>
+http://localhost:8080/product/remove/{id} - DELETE </br>
+, где id – идентификатор удаляемого товара </br>
+http://localhost:8080/product/all - GET </br>
+http://localhost:8080/product/find/{id} – GET </br>
+, где id – идентификатор искомого товара;</br>
+http://localhost:8080/product/update/{id} - PUT </br>
+где id – идентификатор изменяемого товара товара </br>
